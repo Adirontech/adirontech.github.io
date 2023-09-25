@@ -1,0 +1,121 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-size: 20px;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/hero.jpg");
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 6rem;
+}
+
+.hero h3 {
+    font-size: 4rem;
+}
+
+nav {
+    background-color: darkolivegreen;
+    overflow: hidden;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.flex-child {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* border: 2px solid yellow; */
+    line-height: 150%;
+    padding: 2rem;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* About Us */
+.people-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    justify-content: center;
+}
+
+.people-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 20rem;
+    height: 8rem;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.people-desc {
+    padding: 2px 16px;
+}
+
+.people-name {
+    font-weight: bolder;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.time-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.time-flex-child {
+    display: flex;
+    justify-content: center;
+}
