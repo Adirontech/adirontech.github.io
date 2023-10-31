@@ -15,15 +15,291 @@
     </nav>
 
     <!-- main body -->
-    <main class="center-text">
+    <main class="body-margin">
         <header>
             Future Artifacts
         </header>
-        <h2>Development Methdology</h2>
-        <h2>Metrics</h2>
         <div>
-            <h2>Domain Model</h2>
+            <h2 class="center-text">Development Methdology</h2>
+            <p>
+                The Adirontech team will use an Agile development methodology, with development sprints completing feature requirements taking the form of user stories. An Agile methodology is preferable for this system because it prevents certain elements from being blocked from completion due to reliance on other incomplete requirements. Our team will also benefit from asynchronous standups and sprint retrospectives, allowing us to keep tabs on our progress and regularly check-in with each other to be more aware of how we are progressing. Development progress will be kept track of using a Trello board, with user stories and features being delegated each sprint depending on the workload we are taking on at that time. Testing will be handled by Github’s automatic build tests, running a testing suite on new builds before they are accepted to be merged to ensure things remain working as expected.
+            </p>
+        </div>
+        <div>
+            <h2 class="center-text">Metrics</h2>
+            <p>
+                In addition to measuring our individual project-related efforts and team efforts, we also plan to utilize <b>requirements volatility</b> for our product metric, and <b>code review completion time</b> for our process metric. We believe that tracking requirements volatility will be beneficial due to the novelty of this project and the potential increase in scope. Additionally, we believe that tracking code review completion time will be beneficial due to the Agile framework in which our team will be operating. Given that we will work in two week sprints, it is important for us to manage code reviews and complete reviews as quickly as possible. 
+            </p>
+        </div>
+        <div>
+            <h2 class="center-text">Domain Model</h2>
             <img class="img-border" src="./assets/img/domain_model.jpeg" alt="Domain model diagram" width="800">
+            <p>
+                The domain model above captures important entities in the Adirondack Visitor Use Management system. First, hikers pre-register their intended hikes using the web app. Once the hiker is at the trail for their hike, the hiker will check in using the kiosk at the trailhead. The web app and trailhead kiosk will synchronize data so that hikers can view all of their updated information. 	
+            </p>
+            <p>
+                Another important entity in the domain model is the Adirondack Park ranger. The ranger is responsible for monitoring trails, as well as retrieving data from remote kiosks throughout the park. Remote kiosks are located at various trails throughout the park. Additionally, remote kiosks do not have access to WiFi, so the kiosk will ping hikers’ devices via bluetooth in order to count the number of visitors passing by the remote kiosk. Due to the lack of WiFi access, rangers need to retrieve data from the remote kiosks in order to upload the data to the Adirondack Visitor Use Management system. 
+            </p>
+        </div>
+        <div>
+            <h2 class="center-text">Scope Statement</h2>
+            <p>
+                The Adirondack Visitor Use Management system will implement a three-part solution to the challenges of paper trail logs, with the goal of eventually replacing paper trail logs entirely. The first part of the solution, the trailhead kiosk, will allow hikers to check-in and check-out from hikes. The second part of the solution, the remote kiosk, will count the number of visitors that pass by using a Bluetooth pinging system. Lastly, the third part of the solution, the app, will allow hikers to pre-register their hikes, view important information about trails, and view parking availability. Additionally, the app will allow park rangers to view aggregated data regarding trail usage. The app is not intended to be used during a hike, but rather to assist hikers with planning their hike. In addition, the app is not intended to be used for emergency situations, due to the lack of reliable WiFi connection. 
+            </p>
+        </div>
+        <div>
+            <h2 class="center-text">Project Goals</h2>
+            <p>Given the scope of the project, our goals are as follows:</p>
+            <ol>
+                <li>Address the challenges of paper trail logs and promote sustainable growth by implementing a digital trail log system.</li>
+                <li>Implement a system that can operate in situations with no wifi or power supply.</li>
+                <li>Conduct in-person tests of the digital trail log system using the RIT trails.</li>
+                <li>Implement a plan to transition from paper trail logs to digital trail logs with no data loss.</li>
+                <li>Enable park rangers to effectively manage trail usage by providing accurate and timely information.</li>
+            </ol>
+        </div>
+        <div>
+            <h2>Milestone Chart</h2>
+            <table border="1">
+                <tr>
+                    <th>Milestone</th>
+                    <th>Completion Date</th>
+                </tr>
+                <tr>
+                    <td>Complete designs for Web App</td>
+                    <td>10/5/23</td>
+                </tr>
+                <tr>
+                    <td>Begin implementation of Web App</td>
+                    <td>10/10/23</td>
+                </tr>
+                <tr>
+                    <td>Complete implementation of Web App</td>
+                    <td>11/2/23</td>
+                </tr>
+                <tr>
+                    <td>Begin implementation of Trailhead Kiosk</td>
+                    <td>11/7/23</td>
+                </tr>
+                <tr>
+                    <td>Complete implementation of Trailhead Kiosk</td>
+                    <td>11/30/23</td>
+                </tr>
+                <tr>
+                    <td>Begin implementation of Remote Kiosk</td>
+                    <td>12/5/23</td>
+                </tr>
+                <tr>
+                    <td>Complete implementation of Remote Kiosk</td>
+                    <td>12/11/23</td>
+                </tr>
+                <tr>
+                    <td>Begin user testing of entire system</td>
+                    <td>1/23/24</td>
+                </tr>
+                <tr>
+                    <td>Begin implementation of stretch goals</td>
+                    <td>2/6/24</td>
+                </tr>
+                <tr>
+                    <td>Complete implementation of stretch goals</td>
+                    <td>4/23/24</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Major Deliverables</h2>
+            <p>
+                In addition to action submissions, such as the midterm project review, short video, and final project presentation, our project will have several major deliverables. The first deliverable is the Web App, which we expect to complete by the beginning of November. The second deliverable is the Trailhead Kiosk, which we expect to complete by the beginning of December. The third and final deliverable is the Remote Kiosk, which we expect to complete by the end of December. Once these three deliverables are completed, we will implement any stretch goals and additional features that could improve the system.
+            </p>
+        </div>
+        <div>
+            <h2>Initial Requirements</h2>
+            <ul>
+                <li>Web App
+                    <ul>
+                        <li>Users shall be able to pre-register hikes via the web app
+                            <ul>
+                                <li>All information that was previously collected from the paper log books will be collected on the web app
+                                    <ul>
+                                        <li>Party Lead Name</li>
+                                        <li>Party Size</li>
+                                        <li>Address</li>
+                                        <li>Phone Number</li>
+                                        <li>Intended Duration of Trip</li>
+                                        <li>Intended Destination</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Users will get tailored information/warnings based on the trails and district they choose to hike.</li>
+                        <li>Users will be able to view information of when trailhead parking lots will be full.</li>
+                        <li>Users must sign into an account to register with the web app</li>
+                        <li>A signed in user will be able to register with pre-populated personal information</li>
+                        <li>Rangers shall be able to view aggregate trail data and information pertaining to trails/districts.</li>
+                        <li>The web app shall be equipped to handle Internationalization (I18N)</li>
+                        <li>Users shall be able to check in and out of their registered hikes using the web app</li>
+                    </ul>
+                </li>
+                <li>Trailhead Kiosk
+                    <ul>
+                        <li>Users shall be able to register using the trailhead kiosk if they did not pre-register</li>
+                        <li>Users shall be able to check in to their pre-registered hikes using trailhead kiosks</li>
+                    </ul>
+                </li>
+                <li>Remote Kiosk
+                    <ul>
+                        <li>Rangers will be able to retrieve data manually from remote kiosks</li>
+                        <li>Remote kiosks will be able to count passing traffic via bluetooth without internet connection</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Communication Plan</h2>
+            <table border="1">
+                <tr>
+                    <th>What Needs to Be Communicated</th>
+                    <th>Why</th>
+                    <th>Between Whom</th>
+                    <th>Best Communication Method</th>
+                    <th>Responsibility for Sending</th>
+                    <th>When/How Often</th>
+                </tr>
+                <tr>
+                    <td>Agenda for sponsor meeting</td>
+                    <td>To set expectations prior to meeting and to act as a guide during the meeting</td>
+                    <td>Team, sponsor, and coach</td>
+                    <td>Email</td>
+                    <td>Heather</td>
+                    <td>Once a week, after our team meeting on Tuesday but before our Thursday meeting</td>
+                </tr>
+                <tr>
+                    <td>Project status</td>
+                    <td>To give an overview of progress and show project success</td>
+                    <td>Team, sponsor, and coach</td>
+                    <td>Meetings (in-person/virtual)</td>
+                    <td>All team members</td>
+                    <td>Once a week at our Thursday meeting with our sponsor and coach</td>
+                </tr>
+                <tr>
+                    <td>Project risks</td>
+                    <td>To inform stakeholders of risks and allow stakeholders to manage their risks related to the project</td>
+                    <td>Team, sponsor, and coach/td>
+                    <td>Meetings (in-person/virtual)</td>
+                    <td>All team members</td>
+                    <td>Once per sprint, where each sprint is 2 weeks</td>
+                </tr>
+                <tr>
+                    <td>Changes in requirements</td>
+                    <td>Changes in requirements will likely affect our development timeline and project scope</td>
+                    <td>Team, sponsor, and coach</td>
+                    <td>Meetings (in-person/virtual)</td>
+                    <td>Sponsor and all team members</td>
+                    <td>As needed, but likely once per sprint as development progress is evaluated</td>
+                </tr>
+                <tr>
+                    <td>Changes in schedule/timeline</td>
+                    <td>Schedule changes will affect our development timeline</td>
+                    <td>Team, sponsor, and coach</td>
+                    <td>Meetings (in-person/virtual), email</td>
+                    <td>Heather</td>
+                    <td>As needed</td>
+                </tr>
+                <tr>
+                    <td>Changes in team organization</td>
+                    <td>Changes in our team organization will impact our structure and individual roles</td>
+                    <td>Team, sponsor, and coach</td>
+                    <td>Meetings (in-person/virtual), email</td>
+                    <td>Heather</td>
+                    <td>As needed</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Stakeholder Management Plan</h2>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Stakeholder Name</th>
+                    <th>Role</th>
+                    <th>Responsibilities</th>
+                    <th>Level of Interest (1-5)</th>
+                    <th>Level of Influence (1-5)</th>
+                    <th>Communication Frequency</th>
+                    <th>Communication Method</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Craig McGowan</td>
+                    <td>Board Member, Project Sponsor</td>
+                    <td>Guiding project requirements, providing feedback on development</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>Weekly</td>
+                    <td>Email, meeting (in-person/virtual)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ari Epstein</td>
+                    <td>Board Member, Project Sponsor</td>
+                    <td>Guiding project requirements, providing feedback on development</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>Weekly</td>
+                    <td>Email, meeting (in-person/virtual)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mark Wilson</td>
+                    <td>Project Coach</td>
+                    <td>Providing feedback on development, providing guidance on development practices</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>Weekly</td>
+                    <td>Email, meeting (in-person/virtual)</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Risk Management Plan</h2>
+            <p>To manage and monitor short-term risks, our team will use the 4-ups, which are updated weekly. To manage long-term risks, we will utilize the following practices and processes:</p>
+            <ol>
+                <li>Risk Identification
+                    <ol>
+                        <li>SWOT analysis</li>
+                    </ol>
+                </li>
+                <li>Risk Analysis
+                    <ol>
+                        <li>Risk exposure (RE) calculations
+                            <ol>
+                                <li>RE = Impact * Probability</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Risk Prioritization
+                    <ol>
+                        <li>Combine Risk RE, category, indicators, mitigation, contingencies, affected stakeholders, and resources for each risk. These will be aggregated in an excel spreadsheet.</li>
+                    </ol>
+                </li>
+                <li>Risk Management Planning
+                    <ol>
+                        <li>A risk management initial planning cycle will take place during a team meeting to examine initial, obvious long term risks.</li>
+                    </ol>
+                </li>
+                <li>Risk Resolution
+                    <ol>
+                        <li>We will decide actions to take towards each risk whether its avoidance, mitigation, knowledge/talent acquisition, or risk transfer</li>
+                    </ol>
+                </li>
+                <li>Risk Monitoring
+                    <ol>
+                        <li>A risk management review session will be conducted at the beginning of every iteration (sprint cycle).</li>
+                    </ol>
+                </li>
+            </ol>
         </div>
     </main>
 </body>
